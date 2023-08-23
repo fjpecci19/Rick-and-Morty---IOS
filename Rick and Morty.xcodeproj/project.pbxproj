@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,10 @@
 		1CD7980B2A9652B400CEA994 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1CD798092A9652B400CEA994 /* LaunchScreen.storyboard */; };
 		1CD798162A9652B400CEA994 /* Rick_and_MortyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD798152A9652B400CEA994 /* Rick_and_MortyTests.swift */; };
 		1CD798212A9652B400CEA994 /* Rick_and_MortyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD798202A9652B400CEA994 /* Rick_and_MortyUITests.swift */; };
+		1CD798332A9652E800CEA994 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 1CD798322A9652E800CEA994 /* Alamofire */; };
+		1CD798382A96534600CEA994 /* ApiProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD798372A96534600CEA994 /* ApiProvider.swift */; };
+		1CD7983D2A96548900CEA994 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD7983C2A96548900CEA994 /* Character.swift */; };
+		1CD798422A9686C100CEA994 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD798412A9686C100CEA994 /* TableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +53,9 @@
 		1CD7981C2A9652B400CEA994 /* Rick and MortyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Rick and MortyUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CD798202A9652B400CEA994 /* Rick_and_MortyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rick_and_MortyUITests.swift; sourceTree = "<group>"; };
 		1CD798222A9652B400CEA994 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1CD798372A96534600CEA994 /* ApiProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiProvider.swift; sourceTree = "<group>"; };
+		1CD7983C2A96548900CEA994 /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
+		1CD798412A9686C100CEA994 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1CD798332A9652E800CEA994 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,6 +114,9 @@
 				1CD798072A9652B400CEA994 /* Assets.xcassets */,
 				1CD798092A9652B400CEA994 /* LaunchScreen.storyboard */,
 				1CD7980C2A9652B400CEA994 /* Info.plist */,
+				1CD798372A96534600CEA994 /* ApiProvider.swift */,
+				1CD7983C2A96548900CEA994 /* Character.swift */,
+				1CD798412A9686C100CEA994 /* TableViewCell.swift */,
 			);
 			path = "Rick and Morty";
 			sourceTree = "<group>";
@@ -144,6 +155,9 @@
 			dependencies = (
 			);
 			name = "Rick and Morty";
+			packageProductDependencies = (
+				1CD798322A9652E800CEA994 /* Alamofire */,
+			);
 			productName = "Rick and Morty";
 			productReference = 1CD797FB2A9652A900CEA994 /* Rick and Morty.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +229,9 @@
 				Base,
 			);
 			mainGroup = 1CD797F22A9652A900CEA994;
+			packageReferences = (
+				1CD798312A9652E800CEA994 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 1CD797FC2A9652A900CEA994 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -259,6 +276,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				1CD798032A9652A900CEA994 /* ViewController.swift in Sources */,
+				1CD798382A96534600CEA994 /* ApiProvider.swift in Sources */,
+				1CD7983D2A96548900CEA994 /* Character.swift in Sources */,
+				1CD798422A9686C100CEA994 /* TableViewCell.swift in Sources */,
 				1CD797FF2A9652A900CEA994 /* AppDelegate.swift in Sources */,
 				1CD798012A9652A900CEA994 /* SceneDelegate.swift in Sources */,
 			);
@@ -593,6 +613,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1CD798312A9652E800CEA994 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.6.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1CD798322A9652E800CEA994 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1CD798312A9652E800CEA994 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1CD797F32A9652A900CEA994 /* Project object */;
 }
