@@ -16,6 +16,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        table.separatorColor = .white
         table.dataSource = self
         getCharacters()
     }
